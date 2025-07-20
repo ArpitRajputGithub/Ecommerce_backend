@@ -10,3 +10,7 @@ app.include_router(order_routes.router)
 @app.get("/")
 def read_root():
     return {"message": "Ecommerce backend for HRone"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}

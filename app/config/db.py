@@ -2,8 +2,7 @@ import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env if present
-
+load_dotenv()  
 def get_database():
     mongo_uri = os.getenv("MONGODB_URI")
     print("Connecting to MongoDB URI:", mongo_uri)
