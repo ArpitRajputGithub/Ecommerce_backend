@@ -5,10 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()  
 def get_database():
     mongo_uri = os.getenv("MONGODB_URI")
-    print("Connecting to MongoDB URI:", mongo_uri)
     client = MongoClient(mongo_uri)
     db = client["ecommerce_db"]
-    print("Using database:", db.name)
     return db
 
 def get_product_collection():
